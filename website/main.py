@@ -31,5 +31,8 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
 
 # MAINLINE
 
-if __name__ == "__main__":  # start the web server 
-    socketio.run(app, debug=True, host=str(config.Config.SERVER))
+if __name__ == "__main__":  # start the web server
+    #addy = open('racer.txt', 'w')
+    socketio.run(app, debug=True, host=str(config.Config.SERVER), port= 5001)
+    #addy.write(str(config.Config.SERVER))
+    #addy.close()
